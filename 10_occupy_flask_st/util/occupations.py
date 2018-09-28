@@ -22,8 +22,6 @@ def table(file_name):
 #returns a random occupation
 def pick_job(dictionary):
      rand_float = random.uniform(0, 99.8) #generates a random float in range [0, 99.8]
-     if rand_float < 6.1: #when it is less than the first percentage
-         return "No job found :("
      for occupation in dictionary:
          rand_float -= dictionary[occupation] #subtract each percentage going down the list
          if rand_float <= 0: #has arrived at the right interval
