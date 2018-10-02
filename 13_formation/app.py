@@ -5,14 +5,21 @@ app = Flask(__name__)
 def home():
     return render_template("page.html")
 
-@app.route("/auth")
+@app.route("/auth", methods = ["POST"])
 def woah():
 	print(app)
 	print(request)
-	print(request.args)
-	print(request.args['username'])
-	print(request.headers)
 	print(request.method)
-	return "This is your username: " + request.args['username'] + "<br> Greetings Earthling. Welcome to this page." + "<br> used " + request.method
-app.debug = True
-app.run()
+	print(request.form)
+	if request.method == 'POST': 
+		return render_template("response.html",
+				username = "Username: " + request.form["username"],
+				method = "Used " + request.method,
+				message = "Welcome, " + request.form['username'])
+	else:
+		return render_template("response.html",
+				username = "Please submit a username")
+	
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
