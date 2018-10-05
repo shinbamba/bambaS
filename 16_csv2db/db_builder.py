@@ -14,9 +14,8 @@ c = db.cursor()               #facilitate db ops
 
 #==========================================================
 #INSERT YOUR POPULATE CODE IN THIS ZONE
-
-#c.execute("DROP TABLE peeps;") # Gets rid of peeps table if it already exists
-#c.execute("DROP TABLE courses;") # Gets rid of courses table if it already exists
+c.execute("DROP TABLE peeps;") # Gets rid of peeps table if it already exists
+c.execute("DROP TABLE courses;") # Gets rid of courses table if it already exists
 
 c.execute("CREATE TABLE peeps(name TEXT, age INTEGER, id INTEGER);") # Create peeps
 c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER)") # Create courses
@@ -34,7 +33,11 @@ with open ('data/courses.csv') as csvfile:
     
 #command = "CREATE TABLE  peeps(age )"          #build SQL stmt, save as string
 #c.execute(command)    #run SQL statement
-
+c.execute("SELECT name, peeps.id, mark FROM peeps, courses WHERE peeps.id=courses.id;")
+i = 1
+for thing in c:
+    if i = thing[1]
+    print thing[2]
 #==========================================================
 
 db.commit() #save changes
