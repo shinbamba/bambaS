@@ -31,13 +31,6 @@ with open ('data/courses.csv') as csvfile:
         c.execute("INSERT INTO courses VALUES( '"+ line['code'] +"', "+ line['mark'] +", " + line['id'] + ");")
 
     
-#command = "CREATE TABLE  peeps(age )"          #build SQL stmt, save as string
-#c.execute(command)    #run SQL statement
-c.execute("SELECT name, peeps.id, mark FROM peeps, courses WHERE peeps.id=courses.id;")
-i = 1
-for thing in c:
-    if i = thing[1]
-    print thing[2]
 #==========================================================
 
 db.commit() #save changes
