@@ -1,0 +1,39 @@
+#body {
+    background-color: darkgray;
+    border: black solid 10px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    background-color: gray;
+    margin: 0;
+}
+
+#nav {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 0;    
+}
+
+h3 {
+    padding-left: 10px;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+#nav a {
+    color:white; 
+    text-decoration: none;
+}
+
+#footer {
+    background-color: lightgray; 
+    color:gray;
+    text-align: right;
+    padding: 5px;
+}
