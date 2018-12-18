@@ -30,14 +30,14 @@ def yes():
 	#Poem API
 	url2= "https://www.poemist.com/api/v1/randompoems"
 	dict2 = dictMaker(url2)
-	print('------------------------------------------')
-	print('PRINTING URL')
-	print(url2)
-	print('-------------------------------------------')
-	print('PRINTING DICT')
-	print(dict2)
-	print('-------------------------------------------')
-	print('-------------------------------------------')
+	#print('------------------------------------------')
+	#print('PRINTING URL')
+	#print(url2)
+	#print('-------------------------------------------')
+	#print('PRINTING DICT')
+	#print(dict2)
+	#print('-------------------------------------------')
+	#print('-------------------------------------------')
 	args = {}
 	args["info0"] = dict0["message"]["body"]["lyrics"]["lyrics_body"]
 	args['des0'] = "MUSIXMATCH API       Song name:       I Want it that Way"
