@@ -1,10 +1,26 @@
-// Team Birdies - Shin Bamba, Johnson Li
+// Team ShinZ (Shin Bamba, Thomas Zhao)
 // SoftDev1 pd8
-// K28 -- Sequential Progression
-// 2018-12-19T
+// K29 -- Sequential Progression II: Electric Boogaloo
+// 2018-12-19
 
+/////////////////////////////// WRAPPER FUNCTIONS ///////////////////////////////
+var fibonacci_wrap = () => {
+    console.log(fibonacci(5))
+    p_tag.innerHTML = "fibonacci(5): " + fibonacci(5);
+};
+
+var gcd_wrap = () => {
+    console.log(gcd(45, 12))
+    p_tag.innerHTML = "gcd(45, 12): " + gcd(45, 12);
+};
+
+var randomStudent_wrap = () => {
+    console.log(randomStudent())
+    p_tag.innerHTML = "randomStudent(): " + randomStudent();
+};
+
+/////////////////////////////// ACTUAL FUNCTIONS ///////////////////////////////
 var fibonacci = (n) => {
-    console.log(fibHelp(1,0,n));
     return fibHelp(1, 0, n);
 };
 
@@ -28,7 +44,16 @@ var randomStudent = () => {
     var randomIndex = Math.floor(Math.random() * students.length);
     return students[randomIndex];
 };
-console.log(document);
-var object = new String("yes");
+
+//////////////////////////////// GETTING ELEMENT IDS //////////////////////////////
 var fib = document.getElementById("a");
-    fib.addEventListener('click', object);
+var greatest = document.getElementById("b");
+var student = document.getElementById("c");
+
+////////////////////////////// ADDING EVENT LISTENERS /////////////////////////////
+fib.addEventListener('click', fibonacci_wrap);
+greatest.addEventListener('click', gcd_wrap);
+student.addEventListener('click', randomStudent_wrap);
+
+//////////////////////////////// DISPLAYING RESULTS //////////////////////////////
+var p_tag = document.getElementById("results");
